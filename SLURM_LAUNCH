@@ -26,11 +26,7 @@ t=$3
 block=$4
 instances=$5
 
-MYDIR=${BASE_DIR}/${PROJ_DIR}/P${p}_Q${q}_T${t}
-
-if [ ! -d $BASE_DIR/$PROJ_DIR ]; then
-	mkdir $BASE_DIR/$PROJ_DIR
-fi
+MYDIR=${BASE_DIR}/${PROJ_DIR}
 
 if [ ! -d $MYDIR ]; then
 	mkdir $MYDIR
