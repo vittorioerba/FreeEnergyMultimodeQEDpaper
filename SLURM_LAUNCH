@@ -1,0 +1,49 @@
+#!/bin/bash
+
+################################################################################
+## USAGE
+# bash MODEL_LAUNCH_FILE nPoints p q t Block Instances
+# p:                numerator
+# q:                denominator
+# t:                temperature
+# Block:            number of istances in the same subjob
+# Instances:        number of subjobs
+################################################################################
+################################################################################
+## MODIFY
+
+BASE_DIR="/home/vittorioerba/ConfocalCavity"
+PROJ_DIR="metastableStates"
+EXE=$BASE_DIR"/gradient.exe"
+
+################################################################################
+################################################################################
+## DO NOT TOUCH
+
+p=$1
+q=$2
+t=$3
+block=$4
+instances=$5
+
+MYDIR=${BASE_DIR}/${PROJ_DIR}/P${p}_Q${q}_T${t}
+
+if [ ! -d $BASE_DIR/$PROJ_DIR ]; then
+	mkdir $BASE_DIR/$PROJ_DIR
+fi
+
+if [ ! -d $MYDIR ]; then
+	mkdir $MYDIR
+fi
+
+echo "Launching simulation..."
+echo "Parameters:"
+echo "p:         "$p
+echo "q:         "$q
+echo "t:         "$t
+echo "block:     "$block
+echo "instances: "$instances
+
+sbatch --job-name ${PROJ_DIR} --cpus-per-task=1 --mem-per-cpu=2G --time=0-12:00 --partition=general --array=1-${instances} --wrap="${EXE} ${p} ${q} ${t} ${block}" -o ${MYDIR}/slurm-%A_%a.out
+
+echo "Done!"
