@@ -20,3 +20,7 @@ See the README there for install instructions.
 
 In this subdirectory you will find a Jupyter (Julia) notebook with the code for the data processing and for the data plots.
 You will also find a Mathematica notebook used to make the qualitative representations presented in the paper.
+
+## Data
+
+The raw and processed data and all the plots produced by the notebooks can be found [here](https://unimi2013-my.sharepoint.com/:f:/g/personal/vittorio_erba_unimi_it/EgDqAdK9WBRFuuI3qoUuJawBhMPM0Ac71lA-scwLNtMTPg).
