@@ -13,10 +13,10 @@ A small number of helper function implementing the model of the paper are also a
 
 ## Julia
 
-In the subdirectory ```julia```, you can find:
-- an implementation in Julia of the gradient descent used in the paper, completely analogous to the C++ implementation;
-- an interface to the non-positive-definite QP solver of [CPLEX](https://www.ibm.com/analytics/cplex-optimizer) through [JuMP](https://jump.dev/), used in the paper to perform global optimization of the model;
-- an interface to the interior point solver of [IPOPT](https://coin-or.github.io/Ipopt/) through [JuMP](https://jump.dev/), not used in the paper, but possibly useful.
+Most of the code used in the paper is written in Julia, and packaged in the package [FreeEnergyMultimodeQED.jl](https://github.com/vittorioerba/FreeEnergyMultimodeQED.jl).
+See the README there for install instructions.
 
-A number of helper function implementing the model of the paper are also available.
+## Notebooks
 
+In this subdirectory you will find a Jupyter (Julia) notebook with the code for the data processing and for the data plots.
+You will also find a Mathematica notebook used to make the qualitative representations presented in the paper.
