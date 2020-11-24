@@ -21,7 +21,7 @@ See the README there for install instructions.
 In this subdirectory you will find a Jupyter (Julia) notebook with the code for the data processing and for the data plots.
 You will also find a Mathematica notebook used to make the qualitative representations presented in the paper.
 
-Finally, the file ```notebooks/recapNumberSimulations.csv``` contains, for given values of $q$ and $p$, the total number of gradient descent runs considered.
+Finally, the file ```notebooks/recapNumberSimulations.csv``` contains, for given values of q and p, the total number of gradient descent runs considered.
 
 ## Data
 
