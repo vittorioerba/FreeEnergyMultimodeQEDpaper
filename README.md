@@ -1,6 +1,6 @@
-# Free energy landscape of ...
+# Self-induced glassy phase in multimodal cavity quantum electrodynamics
 
-In this repository you can find the code for the paper CITA.
+In this repository you can find the code for the paper ["Self-induced glassy phase in multimodal cavity quantum electrodynamics"](https://arxiv.org/pdf/2101.03754.pdf).
 
 ## C++ 
 
